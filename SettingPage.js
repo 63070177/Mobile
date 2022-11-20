@@ -29,9 +29,17 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 25,
         height: 200,
-        borderWidth: 3,
         backgroundColor: 'white',
         padding: 20,
+        shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+  
     },
     text1: {
         fontSize: 25
@@ -40,11 +48,19 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 25,
         height: 200,
-        borderWidth: 3,
         backgroundColor: 'white',
         flexDirection: 'row',
         padding: 20,
-        marginTop: 50
+        marginTop: 50,
+        shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+  
     },
     switch:{
         position: 'absolute',
