@@ -1,75 +1,75 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { FontAwesome5 } from "@expo/vector-icons";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.group1}>
-        <View style={styles.box1}>
+        <TouchableOpacity style={styles.box1}>
           <View style={styles.img1}>
             <FontAwesome5 name="calendar" style={styles.img2}/>
           </View>
           <Text>ข่าวสาร</Text>
-        </View>
-        <View style={styles.box2}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.box2}>
           <View style={styles.img1}>
             <FontAwesome5 name="list" style={styles.img2}/>
           </View>
           <Text>วินิจฉัย</Text>
           <Text>ตามชนิดพืช</Text>
-        </View>
-        <View style={styles.box3}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.box3}>
           <View style={styles.img1}>
             <FontAwesome5 name="search" style={styles.img2}/>
           </View>
           <Text>เทคนิคอื่นๆ</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={styles.group2}>
-        <View style={styles.box4}>
+        <TouchableOpacity style={styles.box4}>
           <View style={styles.img1}>
             <FontAwesome5 name="seedling" style={styles.img2}/>
           </View>
           <Text>องค์ความรู้ด้าน</Text>
           <Text>การอารักขาพืช</Text>
-        </View>
-        <View style={styles.box5}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.box5}>
           <View style={styles.img1}>
             <FontAwesome5 name="bullhorn" style={styles.img2}/>
           </View>
-          <Text>พยากรณ์</Text>
-          <Text>เตือนการระบาด</Text>
-          <Text>ของศัตรูพืช</Text>
-        </View>
-        <View style={styles.box6}>
+          <Text style={{fontSize: 12}}>พยากรณ์</Text>
+          <Text style={{fontSize: 12}}>เตือนการระบาด</Text>
+          <Text style={{fontSize: 12}}>ของศัตรูพืช</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.box6}>
           <View style={styles.img1}>
             <FontAwesome5 name="envelope" style={styles.img2}/>
           </View>
           <Text>ติดต่อ</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={styles.group3}>
-        <View style={styles.box7}>
+        <TouchableOpacity style={styles.box7}>
           <View style={styles.img1}>
             <FontAwesome5 name="bug" style={styles.img2}/>
           </View>
           <Text>วินิจฉัย</Text>
           <Text>ศัตรูพืชเบื้องต้น</Text>
-        </View>
-        <View style={styles.box8}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.box8}>
           <View style={styles.img1}>
             <FontAwesome5 name="cloud" style={styles.img2}/>
           </View>
           <Text>พยากรณ์อากาศ</Text>
-        </View>
-        <View style={styles.box9}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.box9}>
           <View style={styles.img1}>
             <FontAwesome5 name="info" style={styles.img2}/>
           </View>
           <Text>คำแนะนำ</Text>
           <Text>ในการใช้งานแอป</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -87,65 +87,154 @@ const styles = StyleSheet.create({
   },
   box1: {
     width: 100,
-    height: 120,
-    alignItems: 'center'
+    height: 130,
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: 'white'
+  
   },
   box2: {
     width: 100,
-    height: 120,
-    marginTop: 80,
-    alignItems: 'center'
+    height: 130,
+    marginTop: 60,
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: 'white'
+  
   },
   box3: {
     width: 100,
-    height: 120,
-    marginTop: 80,
-    alignItems: 'center'
+    height: 130,
+    marginTop: 60,
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: 'white'
+  
   },
   box4: {
     width: 100,
-    height: 120,
-    alignItems: 'center'
+    height: 130,
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: 'white'
+  
   },
   box5: {
     width: 100,
-    height: 120,
-    marginTop: 80,
-    alignItems: 'center'
+    height: 130,
+    marginTop: 60,
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: 'white'
+  
   },
   box6: {
     width: 100,
-    height: 120,
-    marginTop: 80,
-    alignItems: 'center'
+    height: 130,
+    marginTop: 60,
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: 'white'
+  
   },
   box7: {
     width: 100,
-    height: 120,
-    alignItems: 'center'
+    height: 130,
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: 'white'
+  
   },
   box8: {
     width: 100,
-    height: 120,
-    marginTop: 80,
-    alignItems: 'center'
+    height: 130,
+    marginTop: 60,
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: 'white'
+  
   },
   box9: {
     width: 100,
-    height: 120,
-    marginTop: 80,
-    alignItems: 'center'
+    height: 130,
+    marginTop: 60,
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: 'white'
+  
   },
   img1: {
     width: 80,
-    height: 100,
+    height: 80,
     alignItems: 'center',
-    borderWidth: 2,
     borderColor: 'black'
   },
   img2: {
     marginTop: 20,
-    fontSize: 60,
+    fontSize: 40,
     alignItems: 'center',
   },
 });
