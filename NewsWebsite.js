@@ -1,18 +1,19 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Linking } from "react-native";
+import { StyleSheet, Text, View, Linking, TouchableOpacity } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.box1}>
+      <TouchableOpacity style={styles.box1} 
+      onPress={() => {
+              Linking.openURL("http://www.ppsf.doae.go.th/wordpress/");
+            }}>
         <View style={styles.l1}>
           <FontAwesome5
             name="seedling"
             style={styles.i1}
-            onPress={() => {
-              Linking.openURL("http://www.ppsf.doae.go.th/wordpress/");
-            }}
+            
           />
         </View>
         <View style={styles.r1}>
@@ -33,72 +34,55 @@ export default function App() {
             กองส่งเสริมการอารักขาพืชและจัดการดินปุ๋ย
           </Text>
         </View>
-      </View>
-      <View style={styles.box2}>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.box2}
+                  onPress={() => {
+                    Linking.openURL("https://www.doa.go.th/plprotect/");
+                  }}>
         <View style={styles.l1}>
           <FontAwesome5
             name="leaf"
             style={styles.i1}
-            onPress={() => {
-              Linking.openURL("https://www.doa.go.th/plprotect/");
-            }}
           />
         </View>
         <View style={styles.r1}>
           <Text
             style={styles.txt}
-            onPress={() => {
-              Linking.openURL("https://www.doa.go.th/plprotect/");
-            }}
           >
             เว็บไซต์ #2
           </Text>
           <Text
             style={styles.txt1}
-            onPress={() => {
-              Linking.openURL("https://www.doa.go.th/plprotect/");
-            }}
           >
             สำนักวิจัยพัฒนาการอารักขาพืชกรมวิชาการเกษตร
           </Text>
         </View>
-      </View>
-      <View style={styles.box3}>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.box3}
+      onPress={() => {
+        Linking.openURL(
+          "https://www.dnp.go.th/FOREMIC/WEB%20SITE2/rba_info.php"
+        );
+      }}>
         <View style={styles.l1}>
           <FontAwesome5
             name="bug"
             style={styles.i1}
-            onPress={() => {
-              Linking.openURL(
-                "https://www.dnp.go.th/FOREMIC/WEB%20SITE2/rba_info.php"
-              );
-            }}
           />
         </View>
         <View style={styles.r1}>
           <Text
             style={styles.txt}
-            onPress={() => {
-              Linking.openURL(
-                "https://www.dnp.go.th/FOREMIC/WEB%20SITE2/rba_info.php"
-              );
-            }}
           >
             เว็บไซต์ #3
           </Text>
           <Text
             style={styles.txt1}
-            onPress={() => {
-              Linking.openURL(
-                "https://www.dnp.go.th/FOREMIC/WEB%20SITE2/rba_info.php"
-              );
-            }}
           >
             การควบคุมแมลงศัตรูพืชโดยศูนย์วิจับกีฏวิทยาป่าไม้ที่ 2
           </Text>
         </View>
-      </View>
-      <StatusBar style="auto" />
+      </TouchableOpacity>
     </View>
   );
 }
@@ -115,21 +99,45 @@ const styles = StyleSheet.create({
     width: "90%",
     height: 140,
     flexDirection: "row",
-    borderWidth: 1,
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: 'white'
   },
   box2: {
     width: "90%",
     height: 140,
     marginTop: 50,
     flexDirection: "row",
-    borderWidth: 1,
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: 'white'
   },
   box3: {
     width: "90%",
     height: 140,
     marginTop: 50,
     flexDirection: "row",
-    borderWidth: 1,
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: 'white'
   },
   l1: {
     width: "40%",
@@ -165,13 +173,5 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginLeft: 7,
     marginTop: 4,
-  },
-  bookmark: {
-    fontSize: 30,
-    color: "green",
-  },
-  unbookmark: {
-    fontSize: 30,
-    color: "red",
   },
 });
